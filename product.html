@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+     <div class="navbar">
+        <div class="logo">
+            <img src="finalogo.jpg" alt="logo1.jpg">
+        </div>
+        <div class="menu">
+            <a href="home.html" target="_blank">Home</a>
+            <a href="About.html" target="_blank">About</a>
+            <a href="product.html" target="_blank">Products</a>
+            <a href="contact.html" target="_blank">Contact</a>
+            <a href="location.html" target="_blank">Location</a>
+        </div>
+    </div>
+    <div class="product-container">
+        <div class="text">
+        <h1>Our Products..</h1>
+        <p>Best Quality at best price</p>
+        </div>
+        <input type="text" class="search" placeholder="Search Products">
+        <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        <div class="allproducts">
+            <p id="noProduct" style="display:none; font-size:18px; color:red; margin-top:30px;">
+    No product found
+</p>
+
+            <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>Pulses</h2>
+                <p>$500</p>
+                 <button class="addcart">Add to Cart
+                 <i class="fa-solid fa-cart-arrow-down"></i></button>
+            </div>
+            <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>Pulses</h2>
+                <p>$500</p>
+                <button class="addcart">Add to Cart
+                 <i class="fa-solid fa-cart-arrow-down"></i></button>
+            </div>
+            <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>Pulses</h2>
+                <p>$500</p>
+                <button class="addcart">Add to Cart
+                 <i class="fa-solid fa-cart-arrow-down"></i></button>
+            </div>
+             <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>almond</h2>
+                <p>$500</p>
+                <button class="addcart">Add to Cart
+                 <i class="fa-solid fa-cart-arrow-down"></i></button>
+            </div>
+            <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>cashew</h2>
+                <p>$500</p>
+                <button class="addcart">Add to Cart
+                 <i class="fa-solid fa-cart-arrow-down"></i></button>
+            </div>
+            <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>oil</h2>
+                <p>$500</p>
+                <button class="addcart">Add to Cart
+                 <i class="fa-solid fa-cart-arrow-down"></i></button>
+            </div>
+             <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>sugar</h2>
+                <p>$500</p>
+                <button class="addcart">Add to Cart
+                 <i class="fa-solid fa-cart-arrow-down"></i></button>
+            </div>
+            <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>chana</h2>
+                <p>$500</p>
+                <button class="addcart">Add to Cart
+                 <i class="fa-solid fa-cart-arrow-down"></i></button>
+            </div>
+            <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>matar</h2>
+                <p>$500</p>
+                <button class="addcart">Add to Cart
+                 <i class="fa-solid fa-cart-arrow-down"></i></button>
+            </div>
+             <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>roti</h2>
+                <p>$500</p>
+                <button class="addcart">Add to Cart
+                 <i class="fa-solid fa-cart-arrow-down"></i></button>
+            </div>
+            <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>Pulses</h2>
+                <p>$500</p>
+                <button class="addcart">Add to Cart
+                 <i class="fa-solid fa-cart-arrow-down"></i></button>
+            </div>
+            <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>rice</h2>
+                <p>$500</p>
+                <button class="addcart">Add to Cart
+                 <i class="fa-solid fa-cart-arrow-down"></i></button>
+            </div>
+        </div>
+    </div>
+    <button class="btn" onclick="showMessage()">Know More</button>
+            <p id="about-msg"></p>
+
+        </div>
+         <section class="contact-info">
+        <h2>Contact Us</h2>
+        <p><strong>Phone:</strong> +91 945231135</p>
+        <p><strong>Address:</strong> Teliyagarh, Goshainganj, Ayodhya, Uttar Pradesh
+        <pre>Pincode - 224141</pre>
+        </p>
+        <p><strong>Time:</strong> 8 AM – 10 PM</p>
+    </section>
+
+
+    
+    <footer class="footer">
+        <p>© 2026 Rajesh Kirana Store. All Rights Reserved.
+        <pre>Email- kiranastorerajesh@gmail.com
+Thanks For Visit Us
+            </pre>
+        </p>
+    </footer>
+
+</body>
+<script>
+    
+document.addEventListener("DOMContentLoaded", function () {
+
+    const searchBox = document.querySelector(".search");
+    const products = document.querySelectorAll(".product1");
+    const noProduct = document.getElementById("noProduct");
+
+    searchBox.addEventListener("keyup", function () {
+        let searchValue = searchBox.value.toLowerCase();
+        let found = false;
+
+        products.forEach(product => {
+            let productName = product.querySelector("h2").innerText.toLowerCase();
+
+            if (productName.includes(searchValue)) {
+                product.style.display = "flex";
+                found = true;
+            } else {
+                product.style.display = "none";
+            }
+        });
+
+        // No product found message
+        if (!found) {
+            noProduct.style.display = "block";
+        } else {
+            noProduct.style.display = "none";
+        }
+    });
+
+});
+  function showMessage() {
+    document.getElementById("about-msg").innerText =
+        "Thank you for trusting Rajesh Kirana Store. We look forward to serving you for many more years!";
+}
+</script>
+
+
+
+</html>

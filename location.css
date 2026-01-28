@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    overflow-x: hidden;
+    background-color: #4a4a4a;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    background-color: #0b0303;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+
+
+
+}
+
+.logo img {
+    object-fit: cover;
+    height: 60px;
+    /* navbar ke equal */
+    width: 190px;
+
+
+}
+
+a {
+    margin: 30px;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+a:hover{
+    border: 1px solid #fff;
+    color: #f98900;
+  
+}
+.container{
+    max-width: 950px;
+    background-color:#fff;
+    margin: auto;
+    border-radius: 10px;
+    
+}
+.our-location h1 {
+    text-align: center;
+    color: #f98900;
+    margin-top: 45px;
+    position: relative;
+    top: 40px;
+    font-size: 40px;
+ 
+}
+.our-location p{
+    text-align: center;
+    color:#4a4a4a;
+    margin-top: 50px;
+    font-size: 20px;
+ 
+}
+.googlemap{
+    margin-top: 50px;
+    margin: 50px;
+    border-radius: 10px;
+}
+.info{
+    margin-left: 50px;
+}
+.info h2{
+    color: #f98900;
+    font-size: 35px;
+}
+.info h6{
+    margin-top: 5px;
+font-size: 20px;
+}
+.info p,.ph-no,.email{
+    color: #4a4a4a;
+     margin-top: 5px;
+}
+
+.ph-no i,.email i{
+    color: #f98900;
+}
+.info h3{
+     margin-top: 15px;
+     font-size: 20px;
+}
+.info {
+    line-height: 2;
+}
+#closed{
+    color: red;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.contact-info{
+    position: relative;
+    top: 40px;
+    padding: 50px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-info h2{
+    margin-bottom: 15px;
+}
+
+.contact-info p{
+    margin: 5px 0;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    position: relative;
+
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+     
+@media (max-width: 992px) {
+    .logo {
+        padding-left: 20px;
+    }
+    .navbar{
+        position: relative;
+    }
+
+    .menu a {
+        margin: 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        /* flex-direction: row; */
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .menu {
+        /* flex-wrap: wrap; */
+        flex-direction: row;
+        justify-content: center;
+        padding-right: 0;
+        margin: 5px;
+    }
+
+    .menu a {
+        margin: 8px;
+        font-size: 14px;
+    }
+   
+}
+
+    .container {
+        max-width: 95%;
+        margin-top: 20px;
+    }
+
+    .our-location h1 {
+        font-size: 28px;
+        top: 20px;
+    }
+
+    .our-location p {
+        font-size: 16px;
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+
+    .googlemap {
+        margin: 20px;
+    }
+
+    .googlemap iframe {
+        height: 280px;
+    }
+
+    .info {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .info h2 {
+        font-size: 28px;
+    }
+
+    .info h6 {
+        font-size: 18px;
+    }
+
+    .info h3 {
+        font-size: 18px;
+    }
+
+    #closed {
+        font-size: 16px;
+    }
+
+    .contact-info {
+        padding: 30px 15px;
+    }
+
+    .footer{
+        top: 40px;
+        font-size: 15px;
+    }
+
+/* ---------- Small Mobile (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+
+    .our-location h1 {
+        font-size: 24px;
+    }
+
+    .our-location p {
+        font-size: 15px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+
+    .googlemap iframe {
+        height: 240px;
+    }
+
+    .info h2 {
+        font-size: 24px;
+    }
+
+    .footer {
+        font-size: 12px;
+        position: relative;
+        top: 35px;
+    }
+}

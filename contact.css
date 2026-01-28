@@ -1,0 +1,303 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    background-color: #0b0303;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.logo img {
+    height: 60px;
+    width: 190px;
+    object-fit: cover;
+}
+
+a {
+    margin: 20px;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+a:hover {
+    border: 1px solid #fff;
+    color: #ff9800;
+}
+
+/* ================= CONTACT HEADING ================= */
+
+.contact {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.contact h1 {
+    color: #ff9800;
+    font-size: 45px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.contact p{
+    font-size: 20px;
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 40px;
+}
+
+/* ================= GET IN TOUCH ================= */
+
+.get_touch {
+    background-color: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.get_touch h1 {
+    margin-bottom: 10px;
+    color: #ff9800;
+}
+
+.get_touch p {
+    margin-bottom: 20px;
+    color: #282626;
+    
+}
+
+.location,
+.email,
+.ph_no {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.location i,
+.email i,
+.ph_no i {
+    color: #ff9800;
+    margin-right: 10px;
+}
+
+/* Social Icons */
+.icons i{
+    margin-top: 25px;
+    margin-right: 20px;
+    font-size: 23px;
+}
+
+
+.icons i:hover {
+    color: #ff9800;
+}
+
+
+
+.message {
+    background-color: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.message h1 {
+    margin-bottom: 20px;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff9800;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form button:hover {
+    background-color: #e68900;
+    color: #0b0303;
+}
+
+.contact-info{
+    position: relative;
+    top: 40px;
+    padding: 50px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-info h2{
+    margin-bottom: 15px;
+}
+
+.contact-info p{
+    margin: 5px 0;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    position: relative;
+    top: 30px;
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+/* ================= RESPONSIVE ================= */
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        align-items: center;
+    }
+    .get_touch,
+    .message {
+        width: 90%;
+        max-width: 500px;
+        padding: 25px;
+    }
+    .icons i {
+        margin-right: 15px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .logo {
+        padding-left: 20px;
+    }
+    .navbar{
+        position: relative;
+    }
+
+    .menu a {
+        margin: 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .menu {
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        padding-right: 0;
+        margin: 5px;
+    }
+
+    .menu a {
+        margin: 8px;
+        font-size: 14px;
+    }
+   
+}
+    .contact h1 {
+        font-size: 35px;
+    }
+    .contact p {
+        font-size: 18px;
+    }
+
+    
+
+
+    .get_touch h1,
+    .message h1 {
+        font-size: 25px;
+    }
+    .form input,
+    .form textarea,
+    .form button {
+        font-size: 16px;
+    }
+
+
+@media (max-width: 480px) {
+    .contact h1 {
+        font-size: 28px;
+    }
+    .contact p {
+        font-size: 16px;
+    }
+    .get_touch,
+    .message {
+        width: 95%;
+        padding: 20px;
+    }
+    .icons i {
+        margin-right: 12px;
+        font-size: 18px;
+    }
+    .form input,
+    .form textarea,
+    .form button {
+        font-size: 15px;
+        padding: 10px;
+    }
+}

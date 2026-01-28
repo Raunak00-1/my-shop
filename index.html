@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    
+    <div class="navbar">
+        <div class="logo">
+            <img src="finalogo.jpg" alt="logo1.jpg">
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="About.html" >About</a>
+            <a href="product.html">Products</a>
+            <a href="contact.html" >Contact</a>
+            <a href="location.html">Location</a>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="overlay"></div>
+        <h1>Welcome To Rajesh Kirana Store..</h1>
+        <p class="best">Best quality products at best price</p>
+        <a href="product.html" class="btn">View Products</a>
+        <p class="hero-small">
+            ✔ 100% Fresh & Branded Products <br>
+            ✔ Reasonable Price • Daily Needs Store <br>
+            ✔ Trusted by 500+ Families
+        </p>
+        <p class="offer">
+            🎉 Special Discounts on Monthly Ration <br>
+            📍 Visit Our Store – Best Price Guaranteed
+        </p>
+    </div>
+
+
+    <div class="slider">
+        <img src="hero image1.jpg" class="slide active">
+        <img src="heroimage2.png" class="slide">
+        <img src="heroimage3.png" class="slide">
+        <img src="heroimage4.png" class="slide">
+        <button class="nav prev">&#10094;</button>
+        <button class="nav next">&#10095;</button>
+    </div>
+    <div class="about">
+        <h1 class="aboutus">About Our Shop</h1>
+        <p class="about-text">
+            Rajesh Kirana Store has been serving the people of Teliyagarh, Ayodhya for over
+            20 years with trust, quality, and honesty. Founded and managed by Mr. Bhola Nath,
+            our shop has become a reliable destination for daily grocery and household needs.
+            <br><br>
+            We provide a wide range of products including rice, wheat, pulses, edible oils,
+            spices, packaged foods, and other essential items — all at reasonable and fair prices.
+            Customer satisfaction and product quality have always been our top priorities.
+            <br><br>
+            With years of experience and the trust of hundreds of families, Rajesh Kirana Store
+            continues to deliver fresh, branded, and value-for-money products every day.
+        </p>
+        <a href="About.html" class="readmore">Read More..</a>
+    </div>
+    <div class="product-container">
+        <h1>Our Products</h1>
+        <div class="allproducts">
+            <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>Pulses</h2>
+                <p>$500</p>
+            </div>
+            <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>Pulses</h2>
+                <p>$500</p>
+            </div>
+            <div class="product1">
+                <img src="hero image1.jpg">
+                <h2>Pulses</h2>
+                <p>$500</p>
+            </div>
+        </div>
+        <a href="product.html" class="viewmore">View More..</a>
+    </div>
+    <section class="why-us">
+        <h2>Why Choose Us</h2>
+
+        <div class="why-container">
+
+            <div class="why-box">
+                <h3>✔ Best Quality</h3>
+                <p>High quality products guaranteed</p>
+            </div>
+
+            <div class="why-box">
+                <h3>✔ Affordable Price</h3>
+                <p>Reasonable price for everyone</p>
+            </div>
+
+            <div class="why-box">
+                <h3>✔ Trusted Shop</h3>
+                <p>Hundreds of satisfied customers</p>
+            </div>
+
+            <div class="why-box">
+                <h3>✔ Support</h3>
+                <p>Friendly customer support</p>
+            </div>
+
+        </div>
+    </section>
+    <section class="contact-info">
+        <h2>Contact Us</h2>
+        <p><strong>Phone:</strong> +91 945231135</p>
+        <p><strong>Address:</strong> Teliyagarh, Goshainganj, Ayodhya, Uttar Pradesh</p>
+        <p>Pincode - 224141</p>
+    
+        <p><strong>Time:</strong> 8 AM – 10 PM</p>
+    </section>
+
+
+
+    <footer class="footer">
+        <p>© 2026 Rajesh Kirana Store. All Rights Reserved.</p>
+        <p>Email- kiranastorerajesh@gmail.com </p>
+<p>Thanks For Visit Us</p>
+           
+  
+    </footer>
+</body>
+<script>
+    let slides = document.querySelectorAll(".slide");
+    let prev = document.querySelector(".prev");
+    let next = document.querySelector(".next");
+
+    let index = 0;
+
+    function showSlide(i) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[i].classList.add("active");
+    }
+
+    function nextSlide() {
+        index++;
+        if (index >= slides.length) index = 0;
+        showSlide(index);
+    }
+
+    function prevSlide() {
+        index--;
+        if (index < 0) index = slides.length - 1;
+        showSlide(index);
+    }
+
+    next.addEventListener("click", () => {
+        nextSlide();
+        resetAutoSlide();
+    });
+
+    prev.addEventListener("click", () => {
+        prevSlide();
+        resetAutoSlide();
+    });
+
+    let autoSlide = setInterval(nextSlide, 3000);
+
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 3000);
+    }
+</script>
+
+</html>

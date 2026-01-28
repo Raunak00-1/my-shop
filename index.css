@@ -1,0 +1,529 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    background-color: #0b0303;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+
+
+
+}
+
+.logo img {
+    object-fit: cover;
+    height: 60px;
+    /* navbar ke equal */
+    width: 190px;
+
+
+}
+
+a {
+    margin: 30px;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+a:hover {
+    border: 1px solid #fff;
+
+    color: #ff9800;
+}
+
+.hero {
+    background-image: url("heroimage3.png");
+    height: 523px;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;   /*isse image aache se means pura image aayega aur center me aayegi*/
+    position: relative;
+
+    /* agr mujhe content ko  center  me rkhna ho toh */
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.overlay {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* yaha dark control karo */
+}
+
+.hero h1 {
+    position: relative;
+    color: #fff;
+    font-size: 40px;
+     top: 50px;
+     left: 80px;
+}
+.hero h1:hover{
+    color: #ff9800;
+}
+/* this is the before text only for the best quality */
+/* .hero p{
+    position: absolute;
+    color: #fff;
+    font-size: 25px;
+    top: 65px;
+    left: 80px;
+} */
+ .hero .best{
+    position: absolute;
+    color: #fff;
+    font-size: 25px;
+    top: 113px;
+    left: 80px;
+    z-index: 2;
+}
+.hero h1,
+.btn{
+    position: relative;
+    z-index: 2;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #ff9800;
+    color: #000201;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 138px;
+    left: 55px;
+}
+.btn:hover{
+    color: black;
+    background-color: #e68900;
+}
+.hero-small{
+    position: absolute;
+    top: 300px;
+    left: 80px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.6;
+    z-index: 2;
+}
+.features{
+    position: absolute;
+    top: 200px;
+    left: 80px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.8;
+    z-index: 2;
+}
+.offer{
+    position: absolute;
+    top: 410px;
+    left: 75px;
+    color: #90f438;
+
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 2;
+}
+.slider {
+    position: absolute;
+    top: 135px;
+    left: 870px;
+    width: 320px;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    font-size: 22px;
+    padding: 10px 14px;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 50%;
+}
+
+.nav:hover {
+    background-color: #ff9800;
+    color: #000;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+.about{
+height: 570px;
+background-color: #DDD0C8;
+
+ 
+}
+.aboutus{
+    color:crimson;
+    text-align: center;
+    position: relative;
+    top: 40px;
+    font-size: 36px;
+    color: #ff9800;
+    letter-spacing: 1px;
+    font-weight: 700;
+    
+}
+.about-text{
+    max-width: 900px;
+    margin: 80px auto;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+    text-align: center;
+}
+.readmore{
+    text-align: center;
+    position: relative;
+   
+   
+    background-color: #ff9800;
+  color:#fff3e0;
+    border-radius: 5px;
+}
+.readmore:hover{
+  
+      color: #000;
+    background-color: #e68900;
+}
+.product-container{
+    /* height: 600px;
+    position: relative;
+    border: 2px solid black;
+    text-align: center; */
+     /* padding: 60px 40px; */
+     position: relative;
+    background-color:#A8D5E3;
+    text-align: center;
+    height: 522px;
+   
+}
+.product-container h1{
+     position: relative;
+    top: 30px;
+    margin-bottom: 70px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ff9800;
+    letter-spacing: 1px;
+}
+.allproducts{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+}
+.product1 img{
+ background-color: #fff;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ .product1:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+.product1 img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+.product1 h2{
+    margin-bottom: 8px;
+    color:rgb(20, 19, 20);
+}
+
+.product1 p{
+    font-weight: bold;
+    color: #ff9800;
+}
+.viewmore{
+    position: relative;
+    top: 20px;
+ 
+    background-color: #ff9800;
+    border-radius: 5px;
+}
+.viewmore:hover{
+    background-color: #e68900;
+    color: black;
+}
+.why-us{
+    padding: 60px 50px;
+
+    background-color: #6cdcd6;
+    text-align: center;
+}
+
+.why-us h2{
+    font-size: 30px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.why-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.why-box{
+    width: 220px;
+    background-color:#20B2AA;
+    padding: 20px;
+    border-radius: 8px;
+    
+}
+
+.why-box h3{
+    margin-bottom: 10px;
+    color:  #fff;
+    
+}
+.why-box p{
+    font-size: 19px;
+}
+.contact-info{
+    padding: 50px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    
+}
+
+.contact-info h2{
+    margin-bottom: 15px;
+}
+
+.contact-info p{
+    margin: 5px 0;
+}
+
+
+.footer{
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+    .logo {
+        padding-left: 20px;
+    }
+    .navbar{
+        position: relative;
+    }
+
+    .menu a {
+        margin: 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .menu {
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        padding-right: 0;
+        margin: 5px;
+    }
+
+    .menu a {
+        margin: 8px;
+        font-size: 14px;
+    }
+   
+}
+
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 32px;
+        left: 40px;
+    }
+
+    .hero .best {
+        font-size: 20px;
+        left: 40px;
+    }
+
+    .btn {
+        left: 40px;
+        top: 160px;
+    }
+
+    .hero-small {
+        left: 40px;
+        font-size: 16px;
+    }
+
+    .offer {
+        left: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero h1,
+    .hero .best,
+    .btn,
+    .hero-small,
+    .offer {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 992px) {
+    .slider {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 40px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        width: 90%;
+        height: 250px;
+    }
+}
+@media (max-width: 768px) {
+    .about {
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    .about-text {
+        font-size: 16px;
+        margin: 40px auto;
+    }
+
+    .readmore {
+        left: 0;
+        
+        display: inline-block;
+        margin: auto;
+    }
+}
+@media (max-width: 768px) {
+    .product-container {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .product1 img {
+        width: 100%;
+    }
+    
+}
+@media (max-width: 768px) {
+    .why-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why-box {
+        width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .contact-info {
+        padding: 30px 15px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.35);
+        right: 2px;
+        bottom: 30px;
+    }
+}
+/* #C5ADC5 */
